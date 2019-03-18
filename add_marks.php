@@ -15,7 +15,7 @@
     </tr>
     <tr>
       <td colspan="2"><div align="center">
-        <input type="submit" name="add" id="add" value="Add" />ttttt
+        <input type="submit" name="add" id="add" value="Add" />
       </div></td>
     </tr>
   </table>
