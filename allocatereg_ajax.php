@@ -1,3 +1,7 @@
+
+<?php
+include("header.php");
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -26,6 +30,7 @@
                 var url="allocate_regno.php";
 				
                 url +="?course="+to+"&ye="+year+"&college="+college;
+				//alert(url)
 				
                 xmlHttp.onreadystatechange = stateChange;
                 xmlHttp.open("GET", url, true);
@@ -44,9 +49,15 @@
 
 <body>
 <form id="form1" name="form1" method="post" action="">
-  <table width="286" height="106" border="1">
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <table width="286" height="106" border="0" align="center" cellpadding="10" bgcolor="#CCCCFF">
     <tr>
-      <td>College</td>
+      <td><font color="#000000">College</font></td>
       <td><label for="college"></label>
         <select name="college" id="college">
         <?php
@@ -63,7 +74,7 @@
       </select></td>
     </tr>
     <tr>
-      <td width="121">Year</td>
+      <td width="121"><font color="#000000">Year</font></td>
       <td width="149"><label for="course">
         <select name="year" id="year" >
        
@@ -77,7 +88,7 @@
       </label></td>
     </tr>
     <tr>
-      <td height="26">Course</td>
+      <td height="26"><font color="#000000">Course</font></td>
       <td><select name="course" id="course" onchange="showclass(this.value)">
           <?php
 			include("connection.php");
@@ -94,7 +105,7 @@
     </tr>
     
   </table>
-  <div id="res">
+  <div id="res" align="center">
   </div>
 </form>
 </body>
@@ -103,14 +114,27 @@
 <?php
 if(isset($_POST['allocate']))
 {
+	$p;
 	$regn=$_POST['regno'];
 	$sid=$_POST['sid'];
 	for($i=0;$i<sizeof($regn);$i++)
 	{
+		
 		$p=mysql_query("update students set regno='$regn[$i]' where sid='$sid[$i]'");
+	}
+	if($p>0)
+	{
+		?>
+     <script>
+	 alert("successfully added");
+	 </script>   
+        <?php
 	}
 	
 	
 }
 	
+?>
+<?php
+include("footer.php");
 ?>
