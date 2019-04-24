@@ -22,23 +22,3 @@
 </form>
 </body>
 </html>
-<?php
-if(isset($_POST['add']))
-{
-	include("connection.php");
-	$mark=$_POST['mark'];
-	mysql_query("insert into marks values(null,'$mark')");
-	if($qry>0)
-	{
-		?>
-        <script>
-		alert("successfully added");
-		window.location="admin_home.php";
-		</script>
-        <?php
-	}
-}
-
-?>
-	
-}
