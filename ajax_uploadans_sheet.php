@@ -4,8 +4,8 @@
 		include("connection.php");
 		$id=$_GET['id'];
 		session_start();
-		$lid=$_SESSION['id'];
-		$a=mysql_query("select students.* from examapplication,students where examapplication.sid=students.lid and students.colid='$lid' and examapplication.eid='$id' ")
+		$lid=$_SESSION['lid'];
+		$a=mysql_query("select students.* from examapplication,students where examapplication.sid=students.lid and students.colid='$lid' and examapplication.eid='$id'")
 ;
 		while($b=mysql_fetch_array($a))
 			{
