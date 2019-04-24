@@ -1,3 +1,8 @@
+
+<?php
+
+	include("College_header.php");
+	?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -40,9 +45,12 @@
 
 <body>
 <form id="form1" name="form1" method="post" action="">
-  <table width="200" border="1">
+<p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center" cellpadding="10" bgcolor="#CCCCFF">
     <tr>
-      <td width="77">exam</td>
+      <td width="77"><font color="#000000">Exam</font></td>
       <td width="107"><label for="exam"></label>
         <select name="exam" id="exam" onchange="showclass(this.value)">
         <option>select</option>
@@ -60,36 +68,41 @@
       </select></td>
     </tr>
   </table>
-  <div id="student">
+  <div id="student" align="center">
   
   </div>
-  <p>
-    <input type="submit" name="apply" id="apply" value="Apply" />
-  </p>
+ 
 </form>
 </body>
 </html>
 <?php
+$qry;
 if(isset($_POST['apply']))
 {
-
-	$sname=$_POST['sid'];
-	$eid=$_POST['exam'];
-	
-	for($i=0;$i<sizeof($sname);$i++)
-	{
-		echo $sname;
-	$qry=mysql_query("insert into examapplication values(null,'$sname[$i]','$eid',curdate())");
-	}
-	if($qry>0)
-	{
-		?>
-        <script>
-		alert("successfully added");
-		window.location="college_home.php";
-		</script>
-        <?php
+	if(isset($_POST['sid'])){
+		$sname=$_POST['sid'];
+		$eid=$_POST['exam'];
+		$qry=0;
+		for($i=0;$i<sizeof($sname);$i++)
+		{
+		
+		$qry=mysql_query("insert into examapplication values(null,'$sname[$i]','$eid',curdate())");
+		}
+		if($qry>0)
+		{
+			?>
+			<script>
+			alert("successfully added");
+			window.location="college_home.php";
+			</script>
+			<?php
+		}
 	}
 }
 
 ?>
+
+<?php
+
+	include("footer.php");
+	?>
