@@ -1,3 +1,7 @@
+
+<?php
+include("header.php");
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -40,9 +44,13 @@
 
 <body>
 <form id="form1" name="form1" method="post" action="">
-  <table width="270" border="1">
+ <p>&nbsp;</p>
+  <p>&nbsp;</p>
+   <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <table width="270" border="0" align="center" cellpadding="10" bgcolor="#CCCCFF">
     <tr>
-      <td width="119">course</td>
+      <td width="119"><font color="#000000">Course</font></td>
       <td width="135"><label for="course"></label>
         <select name="course" id="course" >
           <option>select</option>
@@ -60,7 +68,7 @@
     </tr>
     
     <tr>
-      <td>Semester</td>
+      <td><font color="#000000">Semester</font></td>
       <td><label for="department"></label>
         <label for="sem"></label>
         <select name="sem" id="sem" onchange="showclass(this.value)">
@@ -76,9 +84,8 @@
     </tr>
   </table>
   <p>&nbsp;</p>
-  <table width="540" border="1" id="subject">
-
-  </table>
+  <div id="subject">
+  </div>
   
 </form>
 </body>
@@ -95,9 +102,20 @@ if(isset($_POST['add']))
 	$time=$_POST['time'];
 	for($j=0;$j<sizeof($year);$j++)
 	{
-	mysql_query("insert into exam values(null,'$sid[$j]','$date[$j]','$year[$j]','$time[$j]')"); 
+	$qry=mysql_query("insert into exam values(null,'$sid[$j]','$date[$j]','$year[$j]','$time[$j]')");
+	if($qry>0)
+	{
+		?>
+       <script>
+	   alert("successfully added");
+	   </script> 
+        <?php
+	}
 	}
 }
 
 ?>
 
+<?php
+include("footer.php");
+?>
