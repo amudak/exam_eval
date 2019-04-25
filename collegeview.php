@@ -1,3 +1,8 @@
+
+<?php
+
+	include("header.php");
+	?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,14 +12,19 @@
 
 <body>
 <form id="form1" name="form1" method="post" action="">
-  <table width="805" border="1">
+ <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <table width="805" border="1" align="center" cellpadding="10" bgcolor="#CCCCFF">
     <tr>
-      <td width="93">S/no</td>
-      <td width="147">College Name</td>
-      <td width="151">College Code</td>
-      <td width="130">Address</td>   
-      <td width="73">Phone</td>
-      <td width="92">Email</td>
+      <td width="93"><font color="#FF3300">S/no</font></td>
+      <td width="147"><font color="#FF3300">College Name</font></td>
+      <td width="151"><font color="#FF3300">College Code</font></td>
+      <td width="130"><font color="#FF3300">Address</font></td>   
+      <td width="73"><font color="#FF3300">Phone</font></td>
+      <td width="92"><font color="#FF3300">Email</font></td>
       <td width="73">&nbsp;</td>
       <td width="73">&nbsp;</td>
     </tr>
@@ -31,17 +41,17 @@
 	 
 	?>
     <tr>
-      <td><?php echo $i ?></td>
-      <td><?php echo $res1[1] ?></td>
-      <td><?php echo $res1[2] ?></td>
-      <td><?php echo $res1[3]?>
+      <td><font color="#000000"><?php echo $i ?></font></td>
+      <td><font color="#000000"><?php echo $res1[1] ?></font></td>
+      <td><font color="#000000"><?php echo $res1[2] ?></font></td>
+      <td><font color="#000000"><?php echo $res1[3]?>
       <?php echo $res1[4]?></br>
 	  <?php echo $res1[5]?></br>
       <?php echo $res1[6]?></br>
       <?php echo $res1[7]?></br>
-      <?php echo $res1[8]?></br></td>
-     <td> <?php echo $res1[9]?></td>
-      <td><?php echo $res1[10]?></td>
+      <?php echo $res1[8]?></br></font></td>
+     <td> <font color="#000000"><?php echo $res1[9]?></font></td>
+      <td><font color="#000000"><?php echo $res1[10]?></font></td>
       <td><a href="coldelete.php?id=<?php echo $res1[0]?>">delete</a></td>
        <td><a href="coledit.php?id=<?php echo $res1[0]?>">edit</a></td>
       </tr>
@@ -52,3 +62,7 @@
 </form>
 </body>
 </html>
+<?php
+
+	include("footer.php");
+	?>
