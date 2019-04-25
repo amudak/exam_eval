@@ -1,3 +1,7 @@
+
+<?php
+include("header.php");
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -52,9 +56,15 @@ function valid()
 	</script>
 <body>
 <form id="form1" name="form1" method="post" action="">
-  <table width="343" border="0">
+<p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <table width="343" border="0" align="center" cellpadding="10" bgcolor="#CCCCFF">
     <tr>
-      <td width="77">Department Name</td>
+      <td width="77"><font color="#000000">Department Name</font></td>
       <td width="146"><label for="name"></label>
         <select name="name" id="name">
         <option value="-1">select</option>
@@ -72,25 +82,25 @@ function valid()
      <td width="98">  <div style="visibility:hidden" id="a"><font color="#FF0000">Invalid Entry</font></div></td>
     </tr>
     <tr>
-      <td>Course Name</td>
+      <td><font color="#000000">Course Name</font></td>
       <td><label for="name2"></label>
       <input type="text" name="name2" id="name2" /></td>
     <td>  <div style="visibility:hidden" id="b"><font color="#FF0000">Invalid Entry</font></div></td>
     </tr>
     <tr>
-      <td>Course Code</td>
+      <td><font color="#000000">Course Code</font></td>
       <td><label for="code"></label>
       <input type="text" name="code" id="code" /></td>
      <td> <div style="visibility:hidden" id="c"><font color="#FF0000">Invalid Entry</font></div></td>
     </tr>
     <tr>
-      <td>No of Semester</td>
+      <td><font color="#000000">No of Semester</font></td>
       <td> <input type="number" name="sem" id="sem" /></td>
      <td> <div style="visibility:hidden" id="d"><font color="#FF0000">Invalid Entry</font></div></td>
     </tr>
     <tr>
       <td colspan="2"><div align="center">
-        <input type="submit" name="register" id="register" value="Register" onclick="return valid()"/>
+        <input type="submit" name="register" id="register" value="Register" onclick="return valid()" style="background:#CC6"/>
       </div></td>
     </tr>
   </table>
@@ -117,4 +127,7 @@ if($qry>0)
 	}
 }
 
+?>
+<?php
+include("footer.php");
 ?>
