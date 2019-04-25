@@ -1,3 +1,9 @@
+
+
+<?php
+
+	include("College_header.php");
+	?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -37,9 +43,12 @@
 </head>
 <body>
 <form id="form1" name="form1" method="post" action="">
-  <table width="200" border="0">
+<p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center" cellpadding="10" bgcolor="#CCCCFF">
     <tr>
-      <td width="110">Course</td>
+      <td width="110"><font color="#000000">Course</font></td>
       <td width="74"><label for="course"></label>
         <select name="course" id="course">
          <?php
@@ -56,7 +65,7 @@
       </select></td>
     </tr>
     <tr>
-      <td>Semester</td>
+      <td><font color="#000000">Semester</font></td>
       <td><label for="sem"></label>
         <select name="sem" id="sem" onchange="showclass(this.value)">
          <option>1</option>
@@ -70,9 +79,13 @@
    
   </table>
   <p>&nbsp;</p>
-  <table width="540" border="0" id="subject">
-
-  </table>
+  <div id="subject">
+  </div>
 </form>
 </body>
 </html>
+
+<?php
+
+	include("footer.php");
+	?>
