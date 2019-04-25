@@ -1,3 +1,8 @@
+
+<?php
+
+	include("header.php");
+	?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,10 +12,16 @@
 
 <body>
 <form id="form1" name="form1" method="post" action="">
-  <table width="305" border="0">
+<p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <table width="305" border="1" align="center" cellpadding="10" bgcolor="#CCCCFF">
     <tr>
-      <td width="74">S/no</td>
-      <td width="108">Department Name</td>
+      <td width="74"><font color="#FF3300">S/no</font></td>
+      <td width="108"><font color="#FF3300">Department Name</font></td>
       <td width="63">&nbsp;</td>
        <td width="63">&nbsp;</td>
     </tr>
@@ -29,11 +40,11 @@
 	 
 	?>
     <tr>
-      <td><?php echo $i ?></td>
-      <td><?php echo $res1[1] ?></td>
+      <td><font color="#000000"><?php echo $i ?></font></td>
+      <td><font color="#000000"><?php echo $res1[1] ?></font></td>
       
       <td><a href="depdelete.php?id=<?php echo $res1[0]?>">delete</a></td>
-       <td><a href="depedit.php?id=<?php echo $res1[0]?>">edit</a></td>
+       <td><a href="depedit.php?id=<?php echo $res1[0]?>#form1">edit</a></td>
       </tr>
 	  <?php 
 	  }
@@ -42,3 +53,7 @@
 </form>
 </body>
 </html>
+<?php
+
+	include("footer.php");
+	?>
