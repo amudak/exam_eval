@@ -1,3 +1,8 @@
+
+<?php
+
+	include("header.php");
+	?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -91,6 +96,16 @@ function valid()
         {
             document.getElementById("h").style.visibility="hidden";
         }
+		if((document.getElementById("pincode").value).length!=6)
+	
+	{
+	    flag=false;
+            document.getElementById("h").style.visibility="visible";
+	}
+        else
+        {
+            document.getElementById("h").style.visibility="hidden";
+        }
 		  if(document.getElementById("email").value=="")
 	{
             flag=false;
@@ -136,77 +151,86 @@ function valid()
 }
 </script>
 <body>
+
 <form id="form1" name="form1" method="post" action="">
-  <table width="262" border="1">
-    <tr>
-      <td width="102">collagename</td>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+ 
+  <table width="262" border="0" align="center" cellpadding="10" bgcolor="#CCCCFF">
+  
+
+      <tr>
+      <td width="102"><font color="#000000">Collagename</font></td>
       <td width="144"><label for="name"></label>
       <input type="text" name="name" id="name" /></td>
       <td><div style="visibility:hidden" id="a"><font color="#FF0000">Invalid Entry</font></div></td>
     </tr>
-    <tr>
-      <td>Collegecode</td>
+     <tr>
+      <td><font color="#000000">Collegecode</font></td>
       <td><label for="code"></label>
       <input type="text" name="code" id="code" /></td>
       <td><div style="visibility:hidden" id="b"><font color="#FF0000">Invalid Entry</font></div></td>
     </tr>
     <tr>
-      <td>Place</td>
+      <td><font color="#000000">Place</font></td>
       <td><label for="place"></label>
       <input type="text" name="place" id="place" /></td>
             <td><div style="visibility:hidden" id="c"><font color="#FF0000">Invalid Entry</font></div></td>
 
     </tr>
     <tr>
-      <td>Post</td>
+      <td><font color="#000000">Post</font></td>
       <td><label for="post"></label>
       <input type="text" name="post" id="post" /></td>
             <td><div style="visibility:hidden" id="d"><font color="#FF0000">Invalid Entry</font></div></td>
 
     </tr>
     <tr>
-      <td>City</td>
+      <td><font color="#000000">City</font></td>
       <td><label for="city"></label>
       <input type="text" name="city" id="city" /></td>
             <td><div style="visibility:hidden" id="e"><font color="#FF0000">Invalid Entry</font></div></td>
 
     </tr>
     <tr>
-      <td>District</td>
+      <td><font color="#000000">District</font></td>
       <td><label for="district"></label>
       <input type="text" name="district" id="district" /></td>
             <td><div style="visibility:hidden" id="f"><font color="#FF0000">Invalid Entry</font></div></td>
 
     </tr>
     <tr>
-      <td>State</td>
+      <td><font color="#000000">State</font></td>
       <td><label for="state"></label>
       <input type="text" name="state" id="state" /></td>
             <td><div style="visibility:hidden" id="g"><font color="#FF0000">Invalid Entry</font></div></td>
 
     </tr>
     <tr>
-      <td>Pincode</td>
+      <td><font color="#000000">Pincode</font></td>
       <td><label for="pincode"></label>
-      <input type="text" name="pincode" id="pincode" /></td>
+      <input type="number" name="pincode" id="pincode" /></td>
             <td><div style="visibility:hidden" id="h"><font color="#FF0000">Invalid Entry</font></div></td>
 
     </tr>
     <tr>
-      <td>Email</td>
+      <td><font color="#000000">Email</font></td>
       <td><label for="email"></label>
       <input type="text" name="email" id="email" /></td>
             <td><div style="visibility:hidden" id="i"><font color="#FF0000">Invalid Entry</font></div></td>
 
     </tr>
     <tr>
-      <td>Phone Number</td>
-      <td><input type="text" name="phonenumber" id="phonenumber" /></td>
+      <td><font color="#000000">Phone Number</font></td>
+      <td><input type="number" name="phonenumber" id="phonenumber" /></td>
             <td><div style="visibility:hidden" id="j"><font color="#FF0000">Invalid Entry</font></div></td>
 
     </tr>
     <tr>
-      <td>Password</td>
+      <td><font color="#000000">Password</font></td>
       <td><label for="password"></label>
       <input type="password" name="password" id="password" />        <label for="phonenumber"></label></td>
             <td><div style="visibility:hidden" id="k"><font color="#FF0000">Invalid Entry</font></div></td>
@@ -214,7 +238,7 @@ function valid()
     </tr>
     <tr>
       <td colspan="2"><div align="center">
-        <input type="submit" name="register" id="register" value="Register" onclick="return valid()" />
+        <input type="submit" name="register" id="register" value="Register" onclick="return valid()" style="background:#CC6" />
       </div></td>
     </tr>
   </table>
@@ -250,4 +274,5 @@ if(isset($_POST['register']))
 	}
 }
 
-?>
+	include("footer.php");
+	?>
