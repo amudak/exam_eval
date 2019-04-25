@@ -6,16 +6,15 @@
 </head>
 
 <body>
-<table width="545" border="0">
+<table width="545" border="0" bgcolor="#CCCCFF" align="center" cellpadding="10">
   <tr>
-    <td width="45">s/no</td>
-    <td width="105">Subject code</td>
-    <td width="105">sub name</td>
-    <td width="105">year</td>
-    <td width="92">Exam Date</td>
-    <td width="53">Time</td>
-    <td></td>
-    <td></td>
+    <td width="45"><font color="#FF3300">S/no</font></td>
+    <td width="105"><font color="#FF3300">Subject code</font></td>
+    <td width="105"><font color="#FF3300">Sub name</font></td>
+    <td width="105"><font color="#FF3300">Year</font></td>
+    <td width="92"><font color="#FF3300">Exam Date</font></td>
+    <td width="53"><font color="#FF3300">Time</font></td>
+   
   </tr>
     <?php
 	  include("connection.php");
@@ -30,12 +29,12 @@
 	 
 	?>
     <tr>
-      <td><?php echo $i ?></td>
-      <td><?php echo $res1['code'] ?></td>
-      <td><?php echo $res1['name'] ?></td>
-      <td><?php echo $res1['year'] ?></td>
-      <td><?php echo $res1['date'] ?></td>
-	  <td><?php echo $res1['time'] ?></td>
+      <td><font color="#000000"><?php echo $i ?></font></td>
+      <td><font color="#000000"><?php echo $res1['code'] ?></font></td>
+      <td><font color="#000000"><?php echo $res1['name'] ?></font></td>
+      <td><font color="#000000"><?php echo $res1['year'] ?></font></td>
+      <td><font color="#000000"><?php echo $res1['date'] ?></font></td>
+	  <td><font color="#000000"><?php echo $res1['time'] ?></font></td>
       
        
       </tr>
@@ -44,9 +43,6 @@
 	  ?>
   </table>
   
-  <tr>
-    <td colspan="6"><div align="center"></div></td>
-  </tr>
-</table>
+ 
 </body>
 </html>
